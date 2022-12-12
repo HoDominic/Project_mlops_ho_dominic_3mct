@@ -1,0 +1,7 @@
+#MYSQL_ROOT_PASSWORD=my_root_password
+MYSQL_DATABASE=default_db
+MYSQL_USER=admin
+MYSQL_PORT=3306
+MYSQL_PASSWORD=mypassword
+MYSQL_HOST=localhost
+MARIADB_ROOT_PASSWORD=mypassword

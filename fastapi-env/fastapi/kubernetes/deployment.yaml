@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-deployment
+  namespace: assignment-fastapi-gui
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-app-assignment
+  template:
+    metadata:
+      labels:
+        app: nginx-app-assignment
+    spec:
+      containers:
+      - name: nginx-app-assignment
+        image: ghcr.io/hodominic/assignment-image
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+       - name: regcredassignment
